@@ -21,7 +21,7 @@ int main (int argc, char const *argv[])
         printf("[Padre]: Mi PID es : %d\n\tVariale a: %d" , getpid(), a);
 
         //sacar el pid del padre
-        printf("[Padre]: El id de mi padre el el %d\n", getppid());
+        
         printf("[Padre]: El hijo %d ha terminado \n", wait(&estado_hijo));
         pirntf("[Padre]: El estado de finalizacion ha sido %d\n", estado_hijo)
 
