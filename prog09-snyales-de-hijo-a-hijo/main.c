@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <stdlib.h>
+#include <sys/wait.h>
 
 void tratarSenyal(int cod_senyal);
 
