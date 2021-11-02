@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 {
     pid_t pidHijo1, pidHijo2;
 
-    if (pidHijo1 = fork() ==-1){
+    if ((pidHijo1 = fork()) ==-1){
         perror("Error creando un hijo\n");
         exit(-1);
     }
@@ -21,9 +21,9 @@ int main(int argc, char const *argv[])
         pause(); //Espero una señal
     }else{ //padre
         printf("[Padre]: he creado un hijo con pid: %d\n", pidHijo1);
-        if (pidHijo2 = fork() == -1){
+        if ((pidHijo2 = fork()) == -1){
             perror("Error creando un hijo\n");
-        exit(-1);
+            exit(-1);
         }
         if(pidHijo2 ==0){//hijo 2
             printf("[Hijo 2]: pid: %d\n", getpid());
